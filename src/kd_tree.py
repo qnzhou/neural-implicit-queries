@@ -110,7 +110,7 @@ def construct_uniform_unknown_levelset_tree(func, params, lower, upper, node_ter
     if node_terminate_thresh is None and split_depth is None:
         raise ValueError("must specify at least one of node_terminate_thresh or split_depth as a terminating condition")
     if node_terminate_thresh is None:
-        node_terminate_thresh = 9999999999
+        node_terminate_thresh = 2147483647
 
     d = lower.shape[-1]
     B = batch_process_size
